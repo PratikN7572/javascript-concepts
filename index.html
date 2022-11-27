@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            
+        }
+        .btn,.btn-2{
+            background-color: red;
+           width: 100px;
+           height: 100px;
+           cursor: pointer;
+        }
+        #a:hover + #b {
+            background: blue;
+        }
+        #b:hover + #a {
+            background: blue;
+        }
+
+    </style>
+</head>
+<body>
+    <button class="btn-2" id="b">Click me 2</button>
+    <button class="btn" id="a">Click me</button>
+</body>
+<script>
+    /* Hoisting and Scoping */
+
+    //user input
+    var x = 1;
+    let y = 1;
+    const z = 1;
+// hoisting
+// arrow function allows us to restrict the hoisting
+const dummy = () => {
+    x = 2;
+    y = 2; 
+    // console.log('this is a function');
+    // console.log('value of x in dummy function is :', x);
+    // console.log('value of y in dummy function is :', y);
+    // console.log('value of z in dummy function is :', z);
+}
+x=3
+y=3
+y=4
+x=4
+
+// console.log(x);
+// console.log(y);
+dummy();
+
+/* Operators */
+
+// assignment operator
+
+let a; // currently a has no data type
+a = 1; // we've assigned a integer, i.e. a data type number. We assign value to a variable using assignment operator i.e. a "=" sign.
+
+let greeting;
+greeting = 'Hello my friend';
+const name = 'Praitk';
+
+// Concatanation (concat) - to join two or more variable together.
+
+const welcomeStatement = greeting + ", " + name;
+
+console.log(welcomeStatement);
+const namelyGreeting = `${greeting}, ${name}`; // Template leiteral or String literal is used for string manupulations.
+console.log('====================================');
+console.log("kuchbhi",namelyGreeting); 
+console.log(`Hello my friend, Praitk`);
+console.log('====================================');
+
+let number1;
+number1 = 1;
+const number2 = 2;
+
+// Concatanation (concat) - to join two or more variable together.
+
+const add = number1 * number2;
+
+console.log(add);
+const added = `${number1}, ${number2}`; // Template leiteral or String literal is used for string manupulations.
+console.log("kuchbhi",added); 
+</script>
+</html>
